@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>リアルタイムじゃんけん</title>
+</head>
+<body>
+  <h1>じゃんけん！</h1>
+  <div id="login">
+    <input id="name" placeholder="名前を入力" />
+    <button onclick="join()">参加</button>
+  </div>
+  <div id="game" style="display:none;">
+    <p id="opponent"></p>
+    <button onclick="sendHand('rock')">グー</button>
+    <button onclick="sendHand('scissors')">チョキ</button>
+    <button onclick="sendHand('paper')">パー</button>
+    <p id="result"></p>
+  </div>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="client.js"></script>
+</body>
+</html>
